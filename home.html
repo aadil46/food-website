@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 710px;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            box-sizing: border-box;
+            border-bottom: 1px solid black;
+            background: transparent;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-family: 'Long Cang', cursive;
+            font-size: 30px;
+            position: fixed;
+            z-index: 1;
+        }
+
+        ul {
+
+            margin-left: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 8px 10px 8px 10px;
+            /* background-color:silver;*/
+            margin-left: 5px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+        }
+
+        nav ul li:hover {
+            background-color: silver;
+            cursor: pointer;
+        }
+
+        nav:hover {
+            background-color: black;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            background-image: url("image/pizza.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 710px;
+            z-index: -1;
+
+        }
+
+        .heading {
+            width: 100%;
+            height: 450px;
+            color: white;
+            position: relative;
+            top: 170px;
+            /* border:1px solid green;*/
+        }
+
+        .heading .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-family: 'Long Cang', cursive;
+            font-size: 50px;
+
+        }
+
+        .heading .flex h1 {
+            text-transform: uppercase;
+            font-weight: 100;
+            margin-bottom: 10px;
+        }
+
+        .heading .flex button {
+            display: inline-block;
+            padding: 20px 0px 20px 0px;
+            background-color: rgba(0, 0, 0, 1);
+            border: none;
+        }
+
+        .heading .flex button a {
+
+            color: white;
+            display: inline-block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 550;
+            font-size: 25px;
+            padding: 0px 45px 0px 45px;
+        }
+
+        .subheader {
+            position: relative;
+            top: 200px;
+            left: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: 10px 10px 10px 10px;
+            /*bottom:10px;*/
+        }
+
+        .menu-block {
+            position: relative;
+            width: 100%;
+            height: 1200px;
+            background-color: black;
+
+        }
+
+        .menu-block .menu-heading {
+            width: 50%;
+            color: white;
+            position: absolute;
+            top: 100px;
+            left: 42%;
+            font-family: 'Long Cang', cursive;
+            font-size: 40px;
+
+        }
+
+        .menu-block .menu-heading h1 {
+            font-weight: 250;
+        }
+
+        .menu-block .menu {
+            position: absolute;
+            width: 70%;
+            height: 835px;
+            top: 250px;
+            left: 15%;
+            background-color: white;
+        }
+
+        .menu-block .menu .sub-menu-heading {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            height: 80px;
+            background-color: red;
+            color: white;
+            font-family: 'Long Cang', cursive;
+            font-size: 40px;
+        }
+
+        .menu-block .menu .sub-menu-heading h1 {
+            width: 33.3%;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+        }
+
+        .menu-block .menu .sub-menu-heading h1:nth-child(3) {
+            width: 33.4%;
+        }
+
+        .menu-block .menu .sub-menu-heading h1:hover {
+            background-color: black;
+        }
+
+        .menu-block .menu .menu-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-family: 'Long Cang', cursive;
+            font-size: 40px;
+        }
+
+        .menu-block .menu .menu-content .content {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .menu-block .menu .menu-content .content h1 {
+            float: left;
+            margin-top: 30px;
+            margin-left: 10px;
+            margin-bottom: 25px;
+            font-size: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .menu-block .menu .menu-content .content h2 {
+            float: right;
+            background-color: silver;
+            margin-top: 25px;
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            margin-right: 10px;
+            margin-bottom: 25px;
+            font-size: 25px;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .menu-block .menu .menu-content .content p {
+            clear: both;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 25px;
+            margin-left: 10px;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .ABOUT {
+            position: relative;
+            height: 1400px;
+            width: 100%;
+            background-color: rgba(218, 30, 30, 1);
+            filter: grayscale(75%);
+        }
+
+        .ABOUT .ABOUT-BOX {
+            position: absolute;
+            width: 75%;
+            height: 1200px;
+            left: 12%;
+            top: 10%;
+            /*border: 2px solid black;*/
+        }
+
+        .ABOUT .ABOUT-BOX h1 {
+            text-align: center;
+            color: white;
+            font-family: 'Amatic SC', cursive;
+            font-size: 45px;
+            text-transform: uppercase;
+            font-weight: 100;
+            margin-bottom: 65px;
+        }
+
+        .ABOUT .ABOUT-BOX p {
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            font-size: 30px;
+            font-weight: 50;
+            margin-bottom: 20px;
+
+        }
+
+        .ABOUT .ABOUT-BOX pre {
+            font-family: "Amatic SC", sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 50;
+            margin-bottom: 20px;
+
+        }
+
+        .ABOUT .ABOUT-BOX .image {
+            background-image: url("image/restaurant.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 666px;
+        }
+
+        .ABOUT .ABOUT-BOX .Timing {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ABOUT .ABOUT-BOX .Timing .hours {
+            margin-top: 20px;
+        }
+
+        .ABOUT .ABOUT-BOX .Timing .heads {
+            font-family: "Amatic SC", sans-serif;
+            color: white;
+            font-size: 35px;
+            font-weight: 900;
+            padding: 0;
+            margin-top: 15px;
+            text-align: none;
+        }
+
+        .ABOUT .ABOUT-BOX .Timing .hours .head1 {
+            font-family: "Amatic SC", sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 200;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ABOUT .ABOUT-BOX .Timing .hours .p2 {
+            font-family: "Amatic SC", sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 200;
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            background-color: #607d8b !important;
+            filter: grayscale(50%);
+            color: white;
+        }
+
+        .contact .contact-box {
+            position: absolute;
+            /*border: 1px solid black;*/
+            height: 700px;
+            width: 75%;
+            top: 100px;
+            left: 12%;
+        }
+
+        .contact .contact-box .contact-heading {
+            text-align: center;
+            font-family: "Amatic SC", sans-serif;
+            font-size: 70px;
+            font-weight: 50;
+            margin-bottom: 50px;
+
+        }
+
+        .contact .contact-box .para {
+            font-family: "Amatic SC", sans-serif;
+            margin-bottom: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        .contact .contact-box .para span {
+            background-color: black;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .contact .contact-box form input[type]{
+            width:98%;
+            font-size:35px;
+            font-family: "Amatic SC", sans-serif;
+            font-weight:5;
+            line-height:2;
+            padding-left:10px;
+            margin-bottom:20px; 
+        }
+        .contact .contact-box form input[type="submit"]
+         {
+            width:99%;
+         }
+         footer{
+             width:100%;
+             height:150px;
+             background-color:black;
+             color:white;
+             padding-top:70px;
+             box-sizing:border-box;
+             text-align:center;
+         }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="heading" id="home">
+            <div class="flex">
+                <h1>thin</h1>
+                <h1>CRUST PIZZA</h1>
+                <button type="button" class=""><a>Let me See The Menu </a></button>
+            </div>
+        </div>
+        <h1 class="subheader">Open from 10am to 12pm</h1>
+
+
+    </header>
+    <section class="menu-block" id="menu">
+        <div class="menu-heading">
+            <h1>THE MENU</h1>
+        </div>
+        <div class="menu">
+            <div class="sub-menu-heading">
+                <h1>PIZZA</h1>
+                <h1>SALADS</h1>
+                <h1>STARTER</h1>
+            </div>
+            <div class="menu-content">
+                <div class="content">
+                    <h1>Margherita</h1>
+                    <h2>$12.50</h2>
+                    <p>Fresh tomatoes, fresh mozzarella, fresh basil </p>
+                    <hr>
+                </div>
+                <div class="content">
+                    <h1>Ravioli</h1>
+                    <h2>$14.50</h2>
+                    <p>Ravioli filled with cheese</p>
+                    <hr>
+                </div>
+                <div class="content">
+                    <h1>Bruschetta</h1>
+                    <h2>$8.50</h2>
+                    <p>Bread with pesto, tomatoes, onion, garlic</p>
+                    <hr>
+                </div>
+                <div class="content">
+                    <h1>Garlic bread</h1>
+                    <h2>$9.50</h2>
+                    <p>Grilled ciabatta, garlic butter, onions</p>
+                    <hr>
+                </div>
+                <div class="content">
+                    <h1>Pineapple'o'clock</h1>
+                    <h2>$16.50</h2>
+                    <p>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ABOUT" id="About">
+        <div class="ABOUT-BOX">
+            <h1 class="head">ABOUT</h1>
+            <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
+            <pre>We are proud of our interiors.</pre>
+            <div class="image"></div>
+            <div class="Timing">
+                <h3 class="heads">Opening Hours</h3>
+                <div class="hours">
+                    <h1 class="head1">Mon & Tue CLOSED</h1>
+                    <p class="p2"> Friday 10:00 - 12:00</p>
+                </div>
+                <div class="hours">
+                    <h1 class="head1">Wednesday 10.00 - 24.00</h1>
+                    <p class="p2">Saturday 10:00 - 23:00</p>
+                </div>
+                <div class="hours">
+                    <h1 class="head1">Thursday 10:00 - 24:00</h1>
+                    <p class="p2">Sunday Closed</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h1 class="contact-heading">Contact</h1>
+            <p class="para">Find us at some address at some place or call us at 05050515-122330</p>
+            <p class="para"><span>Reserve</span> a table, ask for today's special or just send us a message:</p>
+            <form>
+               <input type="text" placeholder="Enter your Name" ><br>
+               <input type="text" placeholder="How Many People" ><br>
+               <input type="date"  placeholder="select date"><br>
+               <input type="submit" value="SEND MESSAGE">
+            </form>
+        </div>
+    </section>
+    <footer>   
+       COPYRIGHT&copy 
+    </footer>
+</body>
+
+</html>
